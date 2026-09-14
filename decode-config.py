@@ -3372,6 +3372,9 @@ SETTING_15_4_0_1['webcam_config_esp32p4'][1].update({
                                     })
 # ======================================================================
 SETTING_15_6_0_1 = copy.deepcopy(SETTING_15_4_0_1)
+SETTING_15_6_0_1['sbflag1'][1].update({
+        'miel_hvac_mb_enable':      (HARDWARE.ESP,   '<L', (0xFA0,1,15), (None, '0 <= $ <= 1',                  ('Serial',      '"HVACModbus {}".format($)')) ),
+                                    })
 # ======================================================================
 SETTINGS = [
             (0x0F060001,0x1000, SETTING_15_6_0_1),
